@@ -1,3 +1,35 @@
+# 💻 How to Use Git and GitHub
+
+First, open **Git Bash** :
+-  Open the folder in **File Explorer** where you want the library to be stored.
+-  **Right-click** inside the folder and select the option **"Open Git Bash here"** to open **Git Bash** in that directory.
+
+![open Git Bash](Images/Step0.png)
+
+> Note: If you do not see the "Open Git Bash here" option, it means that Git is not installed on your system.
+> 
+>  You can download and install Git from [this link](https://git-scm.com/downloads).
+>  
+>  For a tutorial on how to install and use Git, check out [this video](https://youtu.be/BsykgHpmUt8).
+  
+-  Once **Git Bash** is open, run the following command to clone the repository:
+
+ ```bash
+git clone https://github.com/aKaReZa75/ESP8266
+```
+- You can copy the above command by either:
+- Clicking on the **Copy** button on the right of the command.
+- Or select the command text manually and press **Ctrl + C** to copy.
+- To paste the command into your **Git Bash** terminal, use **Shift + Insert**.
+
+![Clone the Repository](Images/Step1.png)
+
+- Then, press Enter to start the cloning operation and wait for the success message to appear.
+
+![Open the Library File](Images/Step2.png)
+
+**Note:** Please keep in mind that the numbers displayed in the image might vary when you perform the same actions. This is because repositories are continuously being updated and expanded. Nevertheless, the overall process remains unchanged.
+
 # Special Pins of ESP8266
 
 ![ESP8266 Pinout1](Images/ESP8266_PinOUT.jpg)
@@ -307,27 +339,22 @@ For access to this library, please refer to the following repository:
 By following this minimal hardware setup, you can ensure that your ESP8266 boots up correctly and operates without issues. 
 This setup is essential for both the development and deployment of ESP8266-based projects.
 
----
-
-# 🛠️ License
-
+# 📜 License
 This project is licensed under the GPL-3.0 License. This license grants you the freedom to use, modify, and distribute the project as long as you:
 - Credit the original authors: Give proper attribution to the original creators.
 - Disclose source code: If you distribute a modified version, you must make the source code available under the same GPL license.
 - Maintain the same license: When you distribute derivative works, they must be licensed under the GPL-3.0 too.
 - Feel free to use it in your projects, but make sure to comply with the terms of this license.
-
----
-
-# ⭐ Support Me
-
-If you found this library useful:
+  
+# 🌟 Support Me
+If you found this repository useful:
 - Subscribe to my [YouTube Channel](https://www.youtube.com/@aKaReZa75).
 - Share this repository with others.
 - Give this repository and my other repositories a star.
 - Follow my [GitHub account](https://github.com/aKaReZa75).
-
-# Contact Me
-[![](https://img.shields.io/badge/E-Mail-yellow)](mailto:aKaReZa75@gmail.com)
-[![](https://img.shields.io/badge/You-Tube-red)](https://www.youtube.com/@aKaReZa75)
-[![](https://img.shields.io/badge/Linked-in-blue)](https://www.linkedin.com/in/akareza75)
+  
+# ✉️ Contact Me
+Feel free to reach out to me through any of the following platforms:
+- 📧 [Email: aKaReZa75@gmail.com](mailto:aKaReZa75@gmail.com)
+- 🎥 [YouTube: @aKaReZa75](https://www.youtube.com/@aKaReZa75)
+- 💼 [LinkedIn: @akareza75](https://www.linkedin.com/in/akareza75)
