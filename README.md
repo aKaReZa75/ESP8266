@@ -63,10 +63,18 @@ Specifications
 - **Voltage Range**: 0 to 1V
 - **Accuracy**: Typically around ±2 LSB (Least Significant Bits)
 
-- Note: The **A0** pin only supports voltage levels between 0 to 1V. Voltages higher than 1V may damage the ESP8266. Use a voltage divider circuit to scale down higher voltage levels to the 0-1V range.
+**Note:** The **A0** pin only supports voltage levels between 0 to 1V. Voltages higher than 1V may damage the ESP8266. Use a voltage divider circuit to scale down higher voltage levels to the 0-1V range.
 
-Example Voltage Divider Circuits
-To safely convert higher voltage levels to the 0-1V range suitable for the **A0** pin, use the following voltage divider circuits:
+To convert ADC values to voltage, use the following macro:
+```c
+#define ADC_TO_VOLTAGE(adc_value) ((adc_value) * (1.0 / 1023.0))
+```
+However, for better computational efficiency on microcontrollers, it's recommended to use the following form:
+```c
+#define ADC_TO_VOLTAGE(adc_value) (adc_value * 0.0098039)  /**< 0.0098039 = 1/1023 */
+```
+**Reason:** By using the constant 0.0098039 directly, the microcontroller avoids performing a division operation, which is computationally more expensive. 
+Instead, it only needs to perform multiplication, which is faster and more efficient. This can lead to improved performance, especially in applications where ADC readings are taken frequently.
 
 For a typical voltage divider circuit to convert 3.3V to 1V:
 ```plaintext
@@ -104,12 +112,12 @@ $$R1 = 4 \times R2 = 4 \times 10kΩ = 40kΩ$$
 $$V_{\text{out}} = 5V \times \frac{10kΩ}{39kΩ + 10kΩ} = 1.02V$$
 
 **Summary Table**  
-| Input Voltage | R1    | R2    | Calculated Vout |  
-|---------------|-------|-------|-----------------|  
-| 3.3V          | 22kΩ  | 10kΩ  | 1.03V           |  
-| 5V            | 39kΩ  | 10kΩ  | 1.02V           | 
-| 12V           | 110kΩ  | 10kΩ  | 1.0V           | 
-
+| Input Voltage | R1    | R2    | Calculated Vout | Voltage Formula |
+|---------------|-------|-------|-----------------| -----------------| 
+| 3.3V          | 22kΩ  | 10kΩ  | 1.03V           | adc_value * 0.0032258‬ | 
+| 5V            | 39kΩ  | 10kΩ  | 1.02V           | adc_value * 0.0048876 |  
+| 12V           | 110kΩ  | 10kΩ | 1.0V            | adc_value * 0.0117302 |  
+                                                                
 ## Neither Input Nor Output Pins
 The following pins are related to the Flash IC and should not be configured as IO; otherwise, the ESP8266 operation may be disrupted, causing instability:
 - GPIO6
