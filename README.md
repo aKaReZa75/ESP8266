@@ -309,7 +309,7 @@ This setup is essential for both the development and deployment of ESP8266-based
 
 ---
 
-## 🛠️ License
+# 🛠️ License
 
 This project is licensed under the GPL-3.0 License. This license grants you the freedom to use, modify, and distribute the project as long as you:
 - Credit the original authors: Give proper attribution to the original creators.
@@ -319,7 +319,7 @@ This project is licensed under the GPL-3.0 License. This license grants you the 
 
 ---
 
-## ⭐ Support Me
+# ⭐ Support Me
 
 If you found this library useful:
 - Subscribe to my [YouTube Channel](https://www.youtube.com/@aKaReZa75).
@@ -327,7 +327,7 @@ If you found this library useful:
 - Give this repository and my other repositories a star.
 - Follow my [GitHub account](https://github.com/aKaReZa75).
 
-## Contact Me
+# Contact Me
 [![](https://img.shields.io/badge/E-Mail-yellow)](mailto:aKaReZa75@gmail.com)
 [![](https://img.shields.io/badge/You-Tube-red)](https://www.youtube.com/@aKaReZa75)
 [![](https://img.shields.io/badge/Linked-in-blue)](https://www.linkedin.com/in/akareza75)
