@@ -360,7 +360,7 @@ I will review and respond to your issue as soon as possible. Your participation 
 
 Once your question is answered, it will be moved to the "Closed" section. I recommend checking the "Closed" issues first to see if someone else has already asked the same question. This might save you time and provide you with an immediate answer.
 
-  ![Submeet New Issue](Images/Step6.png)
+  ![Closed section](Images/Step6.png)
 
 **Note:** Pages and interfaces may change over time, but the steps to create an issue generally remain the same.
 
