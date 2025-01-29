@@ -62,6 +62,62 @@ The following pins are related to the Flash IC and should not be configured as I
 - GPIO10
 - GPIO11
 
+## Analog Input Pins
+The ESP8266 features a single analog input pin, labeled **A0**. 
+This pin is used for reading analog voltage levels and converting them into digital values using an ADC (Analog-to-Digital Converter). 
+
+Specifications
+- **Resolution**: 10-bit ADC (0 to 1023)
+- **Voltage Range**: 0 to 1V
+- **Accuracy**: Typically around ±2 LSB (Least Significant Bits)
+
+- Note: The **A0** pin only supports voltage levels between 0 to 1V. Voltages higher than 1V may damage the ESP8266. Use a voltage divider circuit to scale down higher voltage levels to the 0-1V range.
+
+Example Voltage Divider Circuits
+To safely convert higher voltage levels to the 0-1V range suitable for the **A0** pin, use the following voltage divider circuits:
+
+For a typical voltage divider circuit to convert 3.3V to 1V:
+```plaintext
+Vin (Input Voltage)
+  |
+ R1
+  |
+  +----> A0 (Analog Pin of ESP8266)
+  |
+ R2
+  |
+ GND (Ground)
+
+```
+
+### Resistor Calculation  
+**Formula**:  
+$$V_{\text{out}} = V_{\text{in}} \times \frac{R2}{R1 + R2}$$
+
+**Substitute Values**:  
+$$1.0V = 5V \times \frac{R2}{R1 + R2}$$
+
+**Assuming**:  
+- Assume \( R2 = 10kΩ \)
+
+**Solve for R1**:  
+$$\frac{R1}{R2} = \frac{V_{\text{in}}}{V_{\text{out}}} - 1 = \frac{5}{1} - 1 = 4$$  
+$$R1 = 4 \times R2 = 4 \times 10kΩ = 40kΩ$$
+
+**Standard Resistors**:  
+- R1 = 39kΩ (nearest standard value)
+- R2 = 10kΩ  
+
+**Verification**:  
+$$V_{\text{out}} = 5V \times \frac{10kΩ}{39kΩ + 10kΩ} = 1.02V$$
+
+**Summary Table**  
+| Input Voltage | R1    | R2    | Calculated Vout |  
+|---------------|-------|-------|-----------------|  
+| 3.3V          | 22kΩ  | 10kΩ  | 1.03V           |  
+| 5V            | 39kΩ  | 10kΩ  | 1.02V           | 
+| 12V           | 110kΩ  | 10kΩ  | 1.0V           | 
+
 ## Boot Modes
 The ESP8266 has different boot modes that are selected based on the voltage levels applied to certain GPIO pins during power-up.
 
