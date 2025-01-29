@@ -1,8 +1,8 @@
 # Special Pins of ESP8266
 
-![open Git Bash](Images/ESP8266_PinOUT.jpg)
+![ESP8266 Pinout1](Images/ESP8266_PinOUT.jpg)
 
-![open Git Bash](Images/ESP8266_PinOut2.jpg)
+![ESP8266 Pinout1](Images/ESP8266_PinOut2.jpg)
 
 To start the ESP8266, certain pins must be in a specific state (HIGH or LOW). These pins are:
 
@@ -143,7 +143,7 @@ This guide explains the minimal required hardware setup to power up and properly
 To get the ESP8266 up and running, you need the following components:
 - **ESP8266 Module** (e.g., ESP-12E, ESP-12F, ESP-01)
 - **3.3V Power Supply** (capable of providing at least 500mA)
-- **Capacitors**: 10µF + 0.1µF (for power stability)
+- **Capacitors**: 100µF + 100nF (for power stability)
 - **Pull-up Resistors** (10kΩ) for EN, RST, GPIO0, and GPIO2
 - **Pull-down Resistor** (10kΩ) for GPIO15
 - **Momentary Push Button** (for RESET and BOOT mode)
@@ -194,15 +194,50 @@ ESP8266 supports different boot modes based on GPIO states at startup:
 - **Decoupling Capacitors**: Add **10µF + 0.1µF** nethe **VCC** pin for noise filtering.
 
 ## 5. Common Issues & Fixes
-| Issue  | Cause  | Solution  |
-|--------|-------|----------|
-| ESP8266 keeps resetting  | Unstable power  | Use a proper 3.3V regulator and capacitors |
-| ESP8266 does not boot  | GPIO0, GPIO2, or GPIO15 misconfigured  | Check pull-up and pull-down resistors |
-| Garbage data on Serial Monitor  | Wrong baud rate  | Set baud rate to **115200** or **74880** |
-| Cannot upload code  | GPIO0 not LOW  | Hold GPIO0 LOW while resetting |
+| Issue                        | Cause                                    | Solution                                            |
+|------------------------------|------------------------------------------|-----------------------------------------------------|
+| ESP8266 keeps resetting      | Unstable power                           | Use a proper 3.3V regulator and capacitors          |
+| ESP8266 does not boot        | GPIO0, GPIO2, or GPIO15 misconfigured    | Check pull-up and pull-down resistors               |
+| Garbage data on Serial Monitor | Wrong baud rate                         | Set baud rate to **115200** or **74880**            |
+| Cannot upload code           | GPIO0 not LOW during upload              | Hold GPIO0 LOW while resetting                      |
+| WiFi connection issues       | Weak WiFi signal or incorrect credentials | Move closer to the router or check WiFi credentials  |
+| Flashing errors              | Insufficient power or incorrect connections | Ensure stable power supply and correct wiring       |
+| High power consumption       | Deep sleep mode not enabled              | Enable deep sleep mode to save power                |
+| Overheating                  | Poor ventilation                         | Ensure proper ventilation and heat dissipation      |
+| GPIO pins not working        | Incorrect pin mode configuration         | Set correct pin mode (INPUT/OUTPUT) in the code     |
+| Connection drops             | Interference or power fluctuations       | Reduce interference sources and ensure stable power |
 
 ## 6. Minimal Schematic
 Here is a simplified schematic for stable ESP8266 operation:
 
+![ESP8266 min HardWare](Images/ESP8266_MHW.png)
+
+To flash firmware onto the ESP8266, you need to place it into programming mode. This requires setting the GPIO0 pin to LOW while resetting the module. Here is the step-by-step process:
+- **Step 1**: Press and hold both buttons **P1 (RST)** and **P2 (GPIO 0)**.
+- **Step 2**: While keeping **P1 (RST)** pressed, release **P2 (GPIO 0)**.
+- **Step 3**: Finally, release **P1 (RST)**.
+- **Step 4**: Upload the firmware.
+- **Step 5**: After uploading, press **P1 (RST)** once more to restart the ESP8266 and run 
+
+```mermaid
+gantt
+    title Booting ESP8266 into Programming Mode (USART)
+    dateFormat  HH:mm:ss
+    section Steps
+    Press and hold P1 (RST) and P2 (GPIO 0)        :done,       p1p2, 00:00:01, 1s
+    Release P2 (GPIO 0) while keeping P1 (RST) pressed :done,    p2,   after p1p2, 1s
+    Then Release P1 (RST)                              :done,       p1,   after p2, 1s
+    Start uploading the firmware                    :active,     upload, after p1, 3s
+    Wait for the firmware upload to complete        :active,     wait,  after upload, 5s
+    Press P1 (RST) to restart and run the code      :active,     restart, after wait, 1s
+```
+
+This schematic of the ESP8266 module has been edited in **[my Library](https://github.com/aKaReZa75/Altium-Library)**. 
+The pin names are clearly labeled, and the order has been rearranged for easier access. 
+Additionally, restriction pins have been removed from the schematic to prevent design errors. 
+For access to this library, please refer to the following repository:
+[aKaReZa Altium-Library](https://github.com/aKaReZa75/Altium-Library)
+
 ## 7. Conclusion
-By following this minimal hardware setup, you can ensure that your ESP8266 boots up correctly and operates without issues. This setup is essential for both the development and deployment of ESP8266-based projects.
+By following this minimal hardware setup, you can ensure that your ESP8266 boots up correctly and operates without issues. 
+This setup is essential for both the development and deployment of ESP8266-based projects.
