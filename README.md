@@ -21,7 +21,7 @@ For input and output purposes, you can use the following pins without any issues
 - GPIO5
 - GPIO12
 - GPIO13
-- GPIO1
+- GPIO14
 
 These pins remain unchanged during the startup of the ESP8266 and can be used without any problems for connecting outputs like relays.
 Note: GPIO12, GPIO13, GPIO14, and GPIO15 are related to SPI communication.
