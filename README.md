@@ -339,13 +339,6 @@ For access to this library, please refer to the following repository:
 By following this minimal hardware setup, you can ensure that your ESP8266 boots up correctly and operates without issues. 
 This setup is essential for both the development and deployment of ESP8266-based projects.
 
-# 📜 License
-This project is licensed under the GPL-3.0 License. This license grants you the freedom to use, modify, and distribute the project as long as you:
-- Credit the original authors: Give proper attribution to the original creators.
-- Disclose source code: If you distribute a modified version, you must make the source code available under the same GPL license.
-- Maintain the same license: When you distribute derivative works, they must be licensed under the GPL-3.0 too.
-- Feel free to use it in your projects, but make sure to comply with the terms of this license.
-
 # 📝 How to Ask Questions
 If you have any questions or issues, you can raise them through the "Issues" section of this repository. Here's how you can do it:
 
@@ -363,9 +356,9 @@ If you have any questions or issues, you can raise them through the "Issues" sec
    
   ![Submeet New Issue](Images/Step5.png)
 
-We will review and respond to your issue as soon as possible. Your participation helps us improve the repository for everyone!
+I will review and respond to your issue as soon as possible. Your participation helps improve the repository for everyone!
 
-Once your question is answered, it will be moved to the "Closed" section. We recommend checking the "Closed" issues first to see if someone else has already asked the same question. This might save you time and provide you with an immediate answer.
+Once your question is answered, it will be moved to the "Closed" section. I recommend checking the "Closed" issues first to see if someone else has already asked the same question. This might save you time and provide you with an immediate answer.
 
   ![Submeet New Issue](Images/Step6.png)
 
@@ -383,6 +376,13 @@ If you found this repository useful:
 - Share this repository with others.
 - Give this repository and my other repositories a star.
 - Follow my [GitHub account](https://github.com/aKaReZa75).
+
+# 📜 License
+This project is licensed under the GPL-3.0 License. This license grants you the freedom to use, modify, and distribute the project as long as you:
+- Credit the original authors: Give proper attribution to the original creators.
+- Disclose source code: If you distribute a modified version, you must make the source code available under the same GPL license.
+- Maintain the same license: When you distribute derivative works, they must be licensed under the GPL-3.0 too.
+- Feel free to use it in your projects, but make sure to comply with the terms of this license.
   
 # ✉️ Contact Me
 Feel free to reach out to me through any of the following platforms:
