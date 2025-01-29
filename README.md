@@ -11,9 +11,11 @@ To start the ESP8266, certain pins must be in a specific state (HIGH or LOW). Th
 - The **RST** pin must be pulled up; otherwise, due to its high sensitivity, any noise may cause the ESP8266 to reset.
 - The **Enable** pin must also be pulled up; otherwise, the ESP8266 will not power up.
 - The **GPIO0** pin must be pulled up; otherwise, if it is LOW during startup, the ESP8266 will enter BootLoader mode.
-- The **GPIO2** pin is connected to the ESP8266's internal LED. If it is LOW during startup (used as input), the ESP8266 will not boot.
+- The **GPIO2** pin Must be pulled up; if LOW during startup (used as input), the ESP8266 may fail to boot.
+ is connected to the ESP8266's internal LED
+
 - The **GPIO15** pin must be pulled down; otherwise, the ESP8266 will not boot.
-- The **GPIO16** pin is used to wake the ESP8266 from Sleep mode and should be connected to the RST pin.
+- The **GPIO16** pin is used to wake the ESP8266 from Deep Sleep mode and should be connected to the RST pin.
 
 ## Dual-purpose Pins (Input/Output)
 For input and output purposes, you can use the following pins without any issues:
@@ -33,7 +35,7 @@ The following pins can be used as output:
 - GPIO2
 - GPIO15
 
-However, these pins change their status during the ESP8266 startup. For instance, if connected to a relay, the output may change, so use these pins as output with caution.
+However, these pins change their state during startup, which may cause unwanted behavior in connected components like relays, so use these pins as output with caution.
 To use the serial communication pin GPIO1 (TXD) as output, transmission communication should not be used throughout the program and should not be configured.
 The GPIO0 and GPIO2 pins must be pulled up during the ESP8266's initial startup; otherwise, it won't boot.
 GPIO15 pin must be pulled down initially; otherwise, the ESP8266 will not power up.
@@ -45,10 +47,11 @@ The following pins can be used as input:
 - GPIO3
 - A0
 
-To use the serial communication pin GPIO3 (RXD) as input, transmission communication should not be used throughout the program and should not be configured.
+To use the serial communication pin GPIO3 (RXD) as input, transmission communication should not be used throughout the program and should not be configured, otherwise this pin can be used as an input only if UART communication is not required.
 The GPIO0 and GPIO2 pins must be pulled up during the ESP8266's initial startup; otherwise, it won't boot, and if they are low during startup, it will not power up.
 The analog input pin can also be used as a digital input, but you can only apply a logical 1 level to pin A0, and unlike other ESP8266 pins, this level is equal to 1 volt. 
 Additionally, you can only apply a voltage range of 0 to 1 volt to the analog pin on the ESP8266, and a voltage divider should be used to prevent damage to the ESP8266.
+On some development boards like NodeMCU, a built-in voltage divider allows up to 3.3V.
 
 ## Neither Input Nor Output Pins
 The following pins are related to the Flash IC and should not be configured as IO; otherwise, the ESP8266 operation may be disrupted, causing instability:
@@ -62,11 +65,11 @@ The following pins are related to the Flash IC and should not be configured as I
 ## Boot Modes
 The ESP8266 has different boot modes that are selected based on the voltage levels applied to certain GPIO pins during power-up.
 
-| GPIO15 | GPIO0 | GPIO2 | Mode                           |
-|--------|-------|-------|--------------------------------|
-| 0V     | 0V    | 3.3V  | Uart Bootloader                |
-| 0V     | 3.3V  | 3.3V  | Boot sketch (SPI flash)        |
-| 3.3V   | x     | x     | SDIO mode (not used for Arduino) |
+| GPIO15 | GPIO0 | GPIO2 | Mode                            |
+|--------|-------|-------|---------------------------------|
+| LOW    | LOW   | HIGH  | Uart Bootloader                 |
+| LOW    | HIGH  | HIGH  | Boot sketch (SPI flash)         |
+| HIGH   | x     | x     | SDIO mode (not used for Arduino)|
 
 1. **Uart Bootloader Mode:**
    - **Purpose:** This mode is used for flashing the firmware onto the ESP8266 via the UART interface.
@@ -79,7 +82,7 @@ The ESP8266 has different boot modes that are selected based on the voltage leve
    - **Purpose:** This is the standard mode for running the user program stored in the SPI flash memory.
    - **GPIO Configuration:** 
      - GPIO15 = 0V
-     - GPIO0 = 3.3V
+     - GPIO0 = 3.3V (Pull-up)
      - GPIO2 = 3.3V
 
 3. **SDIO Mode:**
@@ -94,7 +97,7 @@ Failing to meet these conditions can result in improper booting or entering unin
 By understanding and correctly configuring these pins, you can ensure that your ESP8266 boots into the desired mode and operates reliably.
 
 ## Notes
-- **GPIO15:** Always pulled low (0V) for standard operation modes. Internal pull-up resistor cannot be used.
+- **GPIO15:** Always pulled low (0V) for standard operation modes. If using an ESP8266 module like ESP-12, check if an internal 5KΩ pull-down resistor is present. Otherwise, add an external 10KΩ resistor to GND.
 - **GPIO0:** Pulled high (3.3V) for normal operation. Using it as a Hi-Z input is not possible.
 - **GPIO2:** Should not be low at boot. You can’t connect a switch directly to this pin without causing boot issues.
 - You don’t have to add an external pull-up resistor to GPIO2, the internal one is enabled at boot.
