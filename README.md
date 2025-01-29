@@ -241,3 +241,28 @@ For access to this library, please refer to the following repository:
 ## 7. Conclusion
 By following this minimal hardware setup, you can ensure that your ESP8266 boots up correctly and operates without issues. 
 This setup is essential for both the development and deployment of ESP8266-based projects.
+
+---
+
+## 🛠️ License
+
+This project is licensed under the GPL-3.0 License. This license grants you the freedom to use, modify, and distribute the project as long as you:
+- Credit the original authors: Give proper attribution to the original creators.
+- Disclose source code: If you distribute a modified version, you must make the source code available under the same GPL license.
+- Maintain the same license: When you distribute derivative works, they must be licensed under the GPL-3.0 too.
+- Feel free to use it in your projects, but make sure to comply with the terms of this license.
+
+---
+
+## ⭐ Support Me
+
+If you found this library useful:
+- Subscribe to my [YouTube Channel](https://www.youtube.com/@aKaReZa75).
+- Share this repository with others.
+- Give this repository and my other repositories a star.
+- Follow my [GitHub account](https://github.com/aKaReZa75).
+
+## Contact Me
+[![](https://img.shields.io/badge/E-Mail-yellow)](mailto:aKaReZa75@gmail.com)
+[![](https://img.shields.io/badge/You-Tube-red)](https://www.youtube.com/@aKaReZa75)
+[![](https://img.shields.io/badge/Linked-in-blue)](https://www.linkedin.com/in/akareza75)
