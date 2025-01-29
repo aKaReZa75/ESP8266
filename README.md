@@ -345,7 +345,38 @@ This project is licensed under the GPL-3.0 License. This license grants you the 
 - Disclose source code: If you distribute a modified version, you must make the source code available under the same GPL license.
 - Maintain the same license: When you distribute derivative works, they must be licensed under the GPL-3.0 too.
 - Feel free to use it in your projects, but make sure to comply with the terms of this license.
-  
+
+# 📝 How to Ask Questions
+If you have any questions or issues, you can raise them through the "Issues" section of this repository. Here's how you can do it:
+
+1. Navigate to the "Issues" tab at the top of the repository page.
+
+  ![Issues](Images/Step3.png)
+
+3. Click on the "New Issue" button.
+   
+  ![New Issue](Images/Step4.png)
+
+4. In the "Description" field, detail your question or issue as thoroughly as possible. You can use text formatting, attach files, and assign the issue to someone if needed.
+5. Optionally, you can add labels, type, projects, and milestones to your issue for better categorization.
+6. Click on the "Submit new issue" button to post your 
+   
+  ![Submeet New Issue](Images/Step5.png)
+
+We will review and respond to your issue as soon as possible. Your participation helps us improve the repository for everyone!
+
+Once your question is answered, it will be moved to the "Closed" section. We recommend checking the "Closed" issues first to see if someone else has already asked the same question. This might save you time and provide you with an immediate answer.
+
+  ![Submeet New Issue](Images/Step6.png)
+
+**Note:** Pages and interfaces may change over time, but the steps to create an issue generally remain the same.
+
+# 🤝 Contributing to the Repository
+If you want to update or modify the Repository:
+- Fork this repository.
+- Make your changes in a new branch.
+- Submit a **Pull Request** with a detailed description of your changes.
+
 # 🌟 Support Me
 If you found this repository useful:
 - Subscribe to my [YouTube Channel](https://www.youtube.com/@aKaReZa75).
