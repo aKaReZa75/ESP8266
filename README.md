@@ -340,29 +340,35 @@ By following this minimal hardware setup, you can ensure that your ESP8266 boots
 This setup is essential for both the development and deployment of ESP8266-based projects.
 
 # 📝 How to Ask Questions
-If you have any questions or issues, you can raise them through the "Issues" section of this repository. Here's how you can do it:
+If you have any questions or issues, you can raise them through the **"Issues"** section of this repository. Here's how you can do it:  
 
-1. Navigate to the "Issues" tab at the top of the repository page.
+1. Navigate to the **"Issues"** tab at the top of the repository page.  
 
   ![Issues](Images/Step3.png)
 
-3. Click on the "New Issue" button.
+2. Click on the **"New Issue"** button.  
    
   ![New Issue](Images/Step4.png)
 
-4. In the "Description" field, detail your question or issue as thoroughly as possible. You can use text formatting, attach files, and assign the issue to someone if needed.
-5. Optionally, you can add labels, type, projects, and milestones to your issue for better categorization.
-6. Click on the "Submit new issue" button to post your 
+3. In the **Title** field, write a short summary of your issue or question.  
+
+4. In the "Description" field, detail your question or issue as thoroughly as possible. You can use text formatting, attach files, and assign the issue to someone if needed. You can also use text formatting (like bullet points or code snippets) for better readability.  
+
+5. Optionally, you can add **labels**, **type**, **projects**, or **milestones** to your issue for better categorization.  
+
+6. Click on the **"Submit new issue"** button to post your question or issue.
    
   ![Submeet New Issue](Images/Step5.png)
 
-I will review and respond to your issue as soon as possible. Your participation helps improve the repository for everyone!
+I will review and respond to your issue as soon as possible. Your participation helps improve the repository for everyone!  
 
-Once your question is answered, it will be moved to the "Closed" section. I recommend checking the "Closed" issues first to see if someone else has already asked the same question. This might save you time and provide you with an immediate answer.
+**Tips**:  
+- Before creating a new issue, please check the **"Closed"** section to see if your question has already been answered.  
+   ![Closed section](Images/Step6.png)  
+- Write your question clearly and respectfully to ensure a faster and better response.  
+- While the examples provided above are in English, feel free to ask your questions in **Persian (فارسی)** as well. There is no difference in how they will be handled!  
 
-  ![Closed section](Images/Step6.png)
-
-**Note:** Pages and interfaces may change over time, but the steps to create an issue generally remain the same.
+**Note:** Pages and interfaces may change over time, but the steps to create an issue generally remain the same.  
 
 # 🤝 Contributing to the Repository
 If you want to update or modify the Repository:
