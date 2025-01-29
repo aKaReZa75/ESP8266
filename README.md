@@ -49,22 +49,14 @@ The following pins can be used as input:
 
 To use the serial communication pin GPIO3 (RXD) as input, transmission communication should not be used throughout the program and should not be configured, otherwise this pin can be used as an input only if UART communication is not required.
 The GPIO0 and GPIO2 pins must be pulled up during the ESP8266's initial startup; otherwise, it won't boot, and if they are low during startup, it will not power up.
-The analog input pin can also be used as a digital input, but you can only apply a logical 1 level to pin A0, and unlike other ESP8266 pins, this level is equal to 1 volt. 
+The analog input pin can also be used as a digital input, and unlike other ESP8266 pins, this level is equal to 1 volt. 
 Additionally, you can only apply a voltage range of 0 to 1 volt to the analog pin on the ESP8266, and a voltage divider should be used to prevent damage to the ESP8266.
-On some development boards like NodeMCU, a built-in voltage divider allows up to 3.3V.
-
-## Neither Input Nor Output Pins
-The following pins are related to the Flash IC and should not be configured as IO; otherwise, the ESP8266 operation may be disrupted, causing instability:
-- GPIO6
-- GPIO7
-- GPIO8
-- GPIO9
-- GPIO10
-- GPIO11
 
 ## Analog Input Pins
 The ESP8266 features a single analog input pin, labeled **A0**. 
 This pin is used for reading analog voltage levels and converting them into digital values using an ADC (Analog-to-Digital Converter). 
+
+**Note:** On some development boards like NodeMCU, a built-in voltage divider allows up to 3.3V.
 
 Specifications
 - **Resolution**: 10-bit ADC (0 to 1023)
@@ -117,6 +109,15 @@ $$V_{\text{out}} = 5V \times \frac{10kΩ}{39kΩ + 10kΩ} = 1.02V$$
 | 3.3V          | 22kΩ  | 10kΩ  | 1.03V           |  
 | 5V            | 39kΩ  | 10kΩ  | 1.02V           | 
 | 12V           | 110kΩ  | 10kΩ  | 1.0V           | 
+
+## Neither Input Nor Output Pins
+The following pins are related to the Flash IC and should not be configured as IO; otherwise, the ESP8266 operation may be disrupted, causing instability:
+- GPIO6
+- GPIO7
+- GPIO8
+- GPIO9
+- GPIO10
+- GPIO11
 
 ## Boot Modes
 The ESP8266 has different boot modes that are selected based on the voltage levels applied to certain GPIO pins during power-up.
