@@ -49,7 +49,7 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
   All educational videos related to this topic are available at this link.
   
 > [!CAUTION]
-> The tutorial has not yet!  
+> This tutorial has not yet!  
   
 - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp8266-technical_reference_en.pdf)
   ---  
