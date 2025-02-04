@@ -1,4 +1,6 @@
 # Special Pins of ESP8266
+This document provides a detailed overview of the special pins of the ESP8266 microcontroller, including their roles, required states for proper operation, and usage guidelines.  
+It also covers dual-purpose pins, input and output pins, analog input, boot modes, and important notes to ensure stable and reliable performance.
 
 ![ESP8266 Pinout1](Images/ESP8266_PinOUT.jpg)
 
