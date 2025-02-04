@@ -1,5 +1,4 @@
 # ESP8266 Wi-Fi microcontroller
-
 The ESP8266 is a low-cost, highly integrated Wi-Fi microcontroller with full TCP/IP stack and microcontroller capabilities.  
 It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi connectivity and ease of use.
 
@@ -40,6 +39,34 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
 - **IDEs**: Arduino IDE, ESP-IDF (Espressif IoT Development Framework).
 - **Programmers**: USB-to-Serial adapters (e.g., CH340, FT232).
 - **Debuggers**: Serial debugging via UART.
+
+# 🔗 Resources
+  Here you'll find a collection of useful links and documents related to the ESP8266 microcontroller and its applications.   
+  These resources include datasheets, tutorials, and essential tools to get you started and guide you through.
+  
+- [YouTube PlayList](https://www.youtube.com/@aKaReZa75)
+  ---  
+  All educational videos related to this topic are available at this link.
+  
+  > [!CAUTION]
+  > The tutorial has not yet  
+  
+- [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp8266-technical_reference_en.pdf)
+  ---  
+  You can download the relevant datasheet from this link. 
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
+  ---  
+  To download the latest version of VsCode, the editor used in the tutorial, visit this link.
+  
+- [Minimun Hardware](./minHW.md)  
+  ---  
+  This document explains the minimal required hardware setup to power up and properly boot the ESP8266. It ensures stable operation and avoids unexpected boot failures.
+
+- [Pin configuration](./Pinout.md)  
+  ---  
+  This document provides a comprehensive guide to the GPIO pins, their functions, and usage examples.
+
 
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
