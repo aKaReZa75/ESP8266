@@ -44,19 +44,9 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
   Here you'll find a collection of useful links and documents related to the ESP8266 microcontroller and its applications.   
   These resources include datasheets, tutorials, and essential tools to get you started and guide you through.
   
-- [YouTube PlayList](https://www.youtube.com/@aKaReZa75)
-  ---  
-  All educational videos related to this topic are available at this link.  
-  **Note**: This tutorial has not yet **started!**
-  
-- [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp8266-technical_reference_en.pdf)
-  ---  
-  You can download the relevant datasheet from this link. 
+> [!CAUTION]
+> This tutorial has not yet **started!**
 
-- [Visual Studio Code](https://code.visualstudio.com/download)
-  ---  
-  To download the latest version of VsCode, the editor used in the tutorial, visit this link.
-  
 - [Minimun Hardware](./minHW.md)  
   ---  
   This document explains the minimal required hardware setup to power up and properly boot the ESP8266. It ensures stable operation and avoids unexpected boot failures.
