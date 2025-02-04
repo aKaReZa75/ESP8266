@@ -47,7 +47,7 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
 - [YouTube PlayList](https://www.youtube.com/@aKaReZa75)
   ---  
   All educational videos related to this topic are available at this link.  
-  **Note**: This tutorial has not yet started!
+  **Note**: This tutorial has not yet **started!**
   
 - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp8266-technical_reference_en.pdf)
   ---  
