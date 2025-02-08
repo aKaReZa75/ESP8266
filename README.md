@@ -53,12 +53,6 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
 > [!CAUTION]
 > This tutorial has not yet **started!**
 
-- [Common Microcontroller Concepts](https://github.com/aKaReZa75/Microcontroller)
-  ---  
-  This document covers foundational topics shared by all microcontrollers, regardless of architecture.   
-  It explains general principles—such as how USART works—without device-specific implementation details, which are covered in individual videos.    
-  This central resource prevents redundancy and gives you a solid theoretical base before moving to practical setups.
-
 - [Minimun Hardware](./minHW.md)  
   ---  
   This document explains the minimal required hardware setup to power up and properly boot the ESP8266. It ensures stable operation and avoids unexpected boot failures.
