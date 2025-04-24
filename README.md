@@ -2,9 +2,6 @@
 The ESP8266 is a low-cost, highly integrated Wi-Fi microcontroller with full TCP/IP stack and microcontroller capabilities.  
 It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi connectivity and ease of use.
 
-> [!CAUTION]
-> It is absolutely critical that you carefully read every single word of this document, line by line, to ensure you don't miss any details. Nothing can be overlooked.
-
 <table>
   <tr>
   <td valign="top">
@@ -23,7 +20,17 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
              alt="aKaReZa 95 - Programming, Git - PART B Thumbnail"/>
       </a>
     </td>
+
+  </td>
   </tr>
+  <tr>
+  <td colspan="2">
+
+  > [!CAUTION]
+  > It is absolutely critical that you carefully read every single word of this document, line by line, to ensure you don't miss any details. Nothing can be overlooked.
+      
+  </td>
+  </tr>  
 </table>
 
 ## Key Features
