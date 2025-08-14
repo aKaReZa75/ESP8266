@@ -78,9 +78,6 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
 > The resources are detailed in the sections below.  
 > To access any of them, simply click on the corresponding blue link.
   
-> [!CAUTION]
-> This tutorial has not yet **started!**
-
 - [Minimun Hardware](./minHW.md)  
   ---  
   This document explains the minimal required hardware setup to power up and properly boot the ESP8266. It ensures stable operation and avoids unexpected boot failures.
@@ -89,6 +86,8 @@ It is widely used in IoT (Internet of Things) projects due to its built-in Wi-Fi
   ---  
   This document provides a comprehensive guide to the GPIO pins, their functions, and usage examples.
 
+> [!CAUTION]
+> This tutorial has not yet **started!**
 
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
